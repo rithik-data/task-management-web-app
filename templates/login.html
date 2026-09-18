@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login - Task Manager
+{% endblock %}
+
+
+{% block content %}
+
+<div class="auth-card">
+
+    <h1>
+        Welcome Back
+    </h1>
+
+    <p class="muted">
+        Login to manage your tasks.
+    </p>
+
+
+    <form method="POST">
+
+        <label>
+            Username
+        </label>
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Enter username"
+            required
+        >
+
+
+        <label>
+            Password
+        </label>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            required
+        >
+
+
+        <button
+            type="submit"
+            class="primary-btn"
+        >
+            Login
+        </button>
+
+    </form>
+
+
+    <p class="switch">
+
+        Don't have an account?
+
+        <a href="{{ url_for('register') }}">
+            Create one
+        </a>
+
+    </p>
+
+</div>
+
+{% endblock %}
