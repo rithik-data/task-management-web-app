@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Task - Task Manager
+{% endblock %}
+
+
+{% block content %}
+
+<div class="form-card">
+
+    <h1>
+        Edit Task
+    </h1>
+
+
+    <form method="POST">
+
+        <label>
+            Title
+        </label>
+
+        <input
+            type="text"
+            name="title"
+            value="{{ task['title'] }}"
+            required
+        >
+
+
+        <label>
+            Description
+        </label>
+
+        <textarea
+            name="description"
+        >{{ task['description'] or '' }}</textarea>
+
+
+        <label>
+            Status
+        </label>
+
+        <select name="status">
+
+            <option
+                value="Pending"
+                {{ 'selected' if task['status'] == 'Pending' else '' }}
+            >
+                Pending
+            </option>
+
+            <option
+                value="Completed"
+                {{ 'selected' if task['status'] == 'Completed' else '' }}
+            >
+                Completed
+            </option>
+
+        </select>
+
+
+        <div class="actions">
+
+            <button
+                type="submit"
+                class="primary-btn"
+            >
+                Save Changes
+            </button>
+
+
+            <a
+                href="{{ url_for('dashboard') }}"
+                class="small-btn edit"
+            >
+                Cancel
+            </a>
+
+        </div>
+
+    </form>
+
+</div>
+
+{% endblock %}
