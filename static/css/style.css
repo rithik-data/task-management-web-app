@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+.navbar {
+    background: #172554;
+    color: white;
+    padding: 16px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logout-btn {
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,.6);
+    padding: 8px 13px;
+    border-radius: 8px;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 35px auto;
+}
+
+.auth-card,
+.form-card {
+    max-width: 470px;
+    margin: 60px auto;
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+.muted {
+    color: #64748b;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    border: 1px solid #d6dce6;
+    border-radius: 9px;
+    padding: 12px;
+    font: inherit;
+    background: white;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.primary-btn {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 9px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.primary-btn:hover {
+    opacity: .9;
+}
+
+.switch {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.switch a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.add-card {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0,0,0,.06);
+    margin-bottom: 25px;
+}
+
+.task-form {
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+}
+
+.task-form textarea {
+    min-height: 48px;
+}
+
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.task-card {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    border-left: 5px solid #f59e0b;
+}
+
+.task-card.completed {
+    border-left-color: #16a34a;
+}
+
+.task-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.status {
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status.pending {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+.status.done {
+    background: #f0fdf4;
+    color: #15803d;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.actions form {
+    display: inline;
+}
+
+.small-btn {
+    display: inline-block;
+    border: 1px solid #cbd5e1;
+    background: white;
+    color: #172033;
+    text-decoration: none;
+    padding: 8px 11px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.small-btn.edit {
+    color: #1d4ed8;
+}
+
+.small-btn.delete {
+    color: #dc2626;
+}
+
+.flash {
+    background: #e0f2fe;
+    color: #075985;
+    padding: 12px 15px;
+    border-radius: 9px;
+    margin-bottom: 18px;
+}
+
+.empty {
+    background: white;
+    padding: 35px;
+    text-align: center;
+    border-radius: 14px;
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 750px) {
+
+    .navbar {
+        padding: 14px 4%;
+    }
+
+    .nav-right span {
+        display: none;
+    }
+
+    .container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .task-form {
+        grid-template-columns: 1fr;
+    }
+
+    .task-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-card,
+    .form-card {
+        margin: 25px auto;
+        padding: 24px;
+    }
+}
